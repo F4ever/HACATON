@@ -24,12 +24,12 @@ window.onload = function() {
                 if (action[0].status > 0){
                     // window.document.getElementsByClassName('lds-dual-ring').remove();
                     window.document.getElementsByClassName('forms')[0].insertAdjacentHTML('beforeend',
-                    '<img src="https://mskukraine.com/wp-content/uploads/2017/01/check-circle-768x768.png" style="height: 100px; width: 100px; position: absolute; right: 64px; top: 17px;"/>')
+                    `<img title="${action[0].description}" src="https://mskukraine.com/wp-content/uploads/2017/01/check-circle-768x768.png" style="height: 100px; width: 100px; position: absolute; right: 64px; top: 17px;"/>`)
                 }
                 if (action[0].status <= 0){
                     // window.document.getElementsByClassName('lds-dual-ring').remove();
                     window.document.getElementsByClassName('forms')[0].insertAdjacentHTML('beforeend',
-                    '<img src="https://www.ac2news.com/wp-content/uploads/Fail-cc-cc.png" style="height: 100px; width: 100px; position: absolute; right: 64px; top: 17px;"/>')
+                    `<img title="${action[0].description}" src="https://www.ac2news.com/wp-content/uploads/Fail-cc-cc.png" style="height: 100px; width: 100px; position: absolute; right: 64px; top: 17px;"/>`)
                 }
             }
         }

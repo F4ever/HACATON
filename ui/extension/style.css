@@ -1,12 +1,14 @@
 body {
     width: 300px;
     padding: 15px;
+    background-color: #d2d2d2 !important;
 }
 
 .header{
     font-size: 22px;
-    color: #ff3333;
+    color: #ed1c24;
     margin-top: 0;
+    font-weight: bold;
 }
 
 .title{
@@ -59,7 +61,10 @@ body {
 
 .myButton{
     cursor: pointer;
-    color: red;
+    color: white !important;
+    font-weight: bold;
+    background-color: #ed1c24;
+    padding: 7px 18px;
 }
 
 #illnesses{
@@ -71,9 +76,10 @@ body {
 }
 
 .list-item{
-    padding: 4px 7px;
+    padding: 4px 17px;
     border: 1px solid #adadad;
-    border-radius: 6px;
+    border-radius: 3px;
     margin-bottom: 8px;
     cursor: pointer;
+    background: white;
 }

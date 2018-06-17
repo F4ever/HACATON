@@ -6,7 +6,7 @@ from rest_framework.response import Response
 from disease.choices import Ratio
 from pcm.utils import BaseViewSet
 from disease.serializers import DiseaseSerializer
-from disease.models import Disease
+from disease.models import Disease, RelayComponent
 from product.models import ComponentContainer, Component
 
 
@@ -28,10 +28,18 @@ class DiseaseValidateViewSet(BaseViewSet):
         for component_local in ComponentContainer.objects.filter(parent=component):
             rating += 2 - self._verify_component(request, component_local.children)
 
-        if request.user.bad_components.filter(title__icontains=component.title[:5]).exists():
-            raise BadRelationException('Very bad')
+        items = request.user.bad_components.filter(title__icontains=component.title[:5])
+        if items.exists():
+            items = items.filter(description__isnull=False)
+            if items.exists():
+                raise BadRelationException(items.first().description)
+            raise BadRelationException('Unknown')
 
-        if request.user.disease.filter(components_m2m__status=Ratio.Bad, components_m2m__component__title__icontains=component.title[:5]).exists():
+        illes = RelayComponent.objects.filter(disease__user=request.user, status=Ratio.Bad, component__title__icontains=component.title[:5])
+        if illes.exists():
+            illes = illes.filter(description__isnull=False)
+            if illes.exists():
+                raise BadRelationException(illes.first().description)
             raise BadRelationException('Very bad')
 
         return rating
@@ -75,7 +83,7 @@ class DiseaseValidateViewSet(BaseViewSet):
                 result.append({
                     **product,
                     'status': 0,
-                    'description': ''
+                    'description': str(err)
                 })
 
         return Response(status=200, data=result)

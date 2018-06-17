@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-    <div class="header">iHealth Help</div>
+    <div class="header">:iHealth Helper</div>
     <div id="authorization" style="visibility: visible">
         <div class="title">Authorization</div>
         <form id="form1">
@@ -36,10 +36,14 @@
 
     <div id="home" style="visibility: hidden; position: absolute">
 		<div id="illnesses">Отметьте ваши болезни:</div>
-		<select id="illnesses-select" class="form-control"></select>
+		<select id="illnesses-select" class="form-control">
+            <option value="null">Выберите болезнь...</option>
+        </select>
 		<hr/>
 		<div id="components">Отметьте нежелательные компоненты:</div>
-		<select id="components-select" class="form-control"></select>
+		<select id="components-select" class="form-control">
+            <option value="null">Выберите аллерген...</option>
+        </select>
         <a id="logout" class="myButton">Logout</a>
     </div>
 

@@ -195,6 +195,9 @@ document.getElementById('login').onclick = function () {
 };
 
 illnessesSelect.onchange = function () {
+    if (illnessesSelect.options[illnessesSelect.selectedIndex].value === 'null'){
+        return;
+    }
     let value = illnessesSelect.options[illnessesSelect.selectedIndex].value;
     chrome.storage.sync.get(['illnesses'], function(result) {
         if (!result.illnesses.filter((item)=>item.id===value).length){
@@ -218,9 +221,13 @@ illnessesSelect.onchange = function () {
         option.remove();
     };
     illnessesDiv.appendChild(option);
+    illnessesSelect.selectedIndex = 0;
 };
 
 componentsSelect.onchange = function () {
+    if (componentsSelect.options[componentsSelect.selectedIndex].value === 'null'){
+        return;
+    }
     let value = componentsSelect.options[componentsSelect.selectedIndex].value;
     chrome.storage.sync.get(['bad_components'], function(result) {
         if (!result.bad_components.filter((item)=>item.id===value).length){
@@ -244,10 +251,10 @@ componentsSelect.onchange = function () {
         option.remove();
     };
     componentsDiv.appendChild(option);
+    componentsSelect.selectedIndex = 0;
 };
 
 function saveBack() {
-    console.log('asd');
     chrome.storage.sync.get(['bad_components', 'illnesses'], function(result) {
         let bad = result.bad_components.map(item=>item.id);
         let ill = result.illnesses.map(item=>item.id);

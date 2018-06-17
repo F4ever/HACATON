@@ -2,18 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d791f5b-7e68-4fb6-be9c-0df8f10641ab" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/extension.crx" afterPath="$PROJECT_DIR$/ui/extension.crx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pcm/core/serializers.py" afterPath="$PROJECT_DIR$/pcm/core/serializers.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pcm/core/views.py" afterPath="$PROJECT_DIR$/pcm/core/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/extension/icon.png" afterPath="$PROJECT_DIR$/ui/extension/icon.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pcm/disease/views.py" afterPath="$PROJECT_DIR$/pcm/disease/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pcm/product/views.py" afterPath="$PROJECT_DIR$/pcm/product/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/extension.pem" afterPath="$PROJECT_DIR$/ui/extension.pem" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/extension/background.js" afterPath="$PROJECT_DIR$/ui/extension/background.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/extension/getDom.js" afterPath="$PROJECT_DIR$/ui/extension/getDom.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/extension/popup.html" afterPath="$PROJECT_DIR$/ui/extension/popup.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/extension/popup.js" afterPath="$PROJECT_DIR$/ui/extension/popup.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/extension/style.css" afterPath="$PROJECT_DIR$/ui/extension/style.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -87,39 +81,22 @@
       <file leaf-file-name="background.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ui/extension/background.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
+            <state relative-caret-position="381">
               <caret line="35" column="47" lean-forward="true" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pcm/core/views.py">
+      <file leaf-file-name="getDom.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ui/extension/getDom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1000">
-              <caret line="59" column="20" lean-forward="false" selection-start-line="59" selection-start-column="20" selection-end-line="59" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pcm/core/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="9" column="27" lean-forward="false" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pcm/product/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="14" column="89" lean-forward="false" selection-start-line="14" selection-start-column="82" selection-end-line="14" selection-end-column="89" />
-              <folding />
+            <state relative-caret-position="680">
+              <caret line="34" column="9" lean-forward="true" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+              <folding>
+                <marker date="1529213427137" expanded="true" signature="1473:1545" ph="..." />
+                <marker date="1529213427137" expanded="true" signature="1935:2007" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -127,18 +104,18 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ui/extension/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="751">
-              <caret line="77" column="19" lean-forward="false" selection-start-line="77" selection-start-column="19" selection-end-line="77" selection-end-column="19" />
+            <state relative-caret-position="40">
+              <caret line="2" column="18" lean-forward="true" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="popup.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="popup.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ui/extension/popup.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="640">
-              <caret line="41" column="34" lean-forward="false" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
+            <state relative-caret-position="91">
+              <caret line="19" column="61" lean-forward="true" selection-start-line="19" selection-start-column="61" selection-end-line="19" selection-end-column="61" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -155,56 +132,47 @@
       <file leaf-file-name="popup.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ui/extension/popup.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="655">
-              <caret line="248" column="20" lean-forward="false" selection-start-line="248" selection-start-column="20" selection-end-line="248" selection-end-column="20" />
+            <state relative-caret-position="2270">
+              <caret line="275" column="27" lean-forward="true" selection-start-line="275" selection-start-column="27" selection-end-line="275" selection-end-column="27" />
               <folding>
                 <element signature="e#760#972#0" expanded="false" />
                 <element signature="e#1462#1720#0" expanded="false" />
                 <element signature="e#2010#2261#0" expanded="false" />
                 <element signature="e#2397#3504#0" expanded="false" />
                 <element signature="e#3568#4670#0" expanded="false" />
-                <element signature="e#5770#6762#0" expanded="false" />
-                <element signature="e#6805#7844#0" expanded="false" />
-                <element signature="n#!!block;n#saveBack#0" expanded="false" />
-                <element signature="n#!!block;n#createIllnes#0" expanded="false" />
-                <marker date="1529207701064" expanded="false" signature="996:1075" ph="{...}" />
-                <marker date="1529207701064" expanded="false" signature="1097:1171" ph="{...}" />
-                <marker date="1529207701064" expanded="false" signature="1213:1393" ph="{&quot;method&quot;: &quot;GET&quot;...}" />
-                <marker date="1529207701064" expanded="false" signature="1761:1941" ph="{&quot;method&quot;: &quot;GET&quot;...}" />
-                <marker date="1529207701064" expanded="false" signature="4733:5432" ph="{...}" />
-                <marker date="1529207701064" expanded="false" signature="5491:5580" ph="{...}" />
-                <marker date="1529207701064" expanded="false" signature="5638:5728" ph="{...}" />
+                <marker date="1529211077219" expanded="false" signature="996:1075" ph="{...}" />
+                <marker date="1529211077219" expanded="false" signature="1097:1171" ph="{...}" />
+                <marker date="1529211077219" expanded="false" signature="1213:1393" ph="{&quot;method&quot;: &quot;GET&quot;...}" />
+                <marker date="1529211077219" expanded="false" signature="1761:1941" ph="{&quot;method&quot;: &quot;GET&quot;...}" />
+                <marker date="1529211077219" expanded="false" signature="4733:5432" ph="{...}" />
+                <marker date="1529211077219" expanded="false" signature="5491:5580" ph="{...}" />
+                <marker date="1529211077219" expanded="false" signature="5638:5728" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="icon.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ui/extension/icon.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="getDom.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ui/extension/getDom.js">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pcm/disease/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="23" column="40" lean-forward="false" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
-              <folding>
-                <marker date="1529207949059" expanded="true" signature="1440:1512" ph="..." />
-                <marker date="1529207949059" expanded="true" signature="1869:1941" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="serializers.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pcm/core/serializers.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="-172">
+              <caret line="42" column="50" lean-forward="true" selection-start-line="42" selection-start-column="50" selection-end-line="42" selection-end-column="50" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="disease.public.disease_disease" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/4a34ac27/24d595b1-c221-49eb-8298-9ce097aa81ec/disease.public.disease_disease">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -213,7 +181,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>div_registration</find>
       <find>validation_message</find>
       <find>disease</find>
       <find>sign</find>
@@ -234,8 +201,6 @@
       <find>strict</find>
       <find>login</find>
       <find>result</find>
-      <find>myButton</find>
-      <find>div_home</find>
       <find>illnesses</find>
       <find>createIllnes</find>
       <find>filter</find>
@@ -243,6 +208,9 @@
       <find>sync.set</find>
       <find>ge</find>
       <find>getElementsByClassName</find>
+      <find>div_home</find>
+      <find>myButton</find>
+      <find>log</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/ui/extension/vendor</dir>
@@ -277,12 +245,12 @@
         <option value="$PROJECT_DIR$/ui/extension/background.js" />
         <option value="$PROJECT_DIR$/pcm/core/serializers.py" />
         <option value="$PROJECT_DIR$/pcm/core/views.py" />
-        <option value="$PROJECT_DIR$/pcm/disease/views.py" />
-        <option value="$PROJECT_DIR$/ui/extension/style.css" />
         <option value="$PROJECT_DIR$/pcm/product/views.py" />
         <option value="$PROJECT_DIR$/ui/extension/popup.js" />
-        <option value="$PROJECT_DIR$/ui/extension/getDom.js" />
+        <option value="$PROJECT_DIR$/ui/extension/style.css" />
         <option value="$PROJECT_DIR$/ui/extension/popup.html" />
+        <option value="$PROJECT_DIR$/pcm/disease/views.py" />
+        <option value="$PROJECT_DIR$/ui/extension/getDom.js" />
       </list>
     </option>
   </component>
@@ -293,6 +261,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="-1920" />
     <option name="y" value="-1084" />
     <option name="width" value="1920" />
     <option name="height" value="1084" />
@@ -636,7 +605,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-1084" width="1920" height="1084" extended-state="6" />
+    <frame x="-1920" y="-1084" width="1920" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -673,38 +642,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pcm/product/migrations/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pcm/disease/migrations/0001_initial.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pcm/disease/migrations/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/24d595b1-c221-49eb-8298-9ce097aa81ec/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/4a34ac27/24d595b1-c221-49eb-8298-9ce097aa81ec/disease.public.core_user">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -880,19 +817,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/4a34ac27/24d595b1-c221-49eb-8298-9ce097aa81ec/disease.public.product_component">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pcm/disease/apps.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -985,14 +909,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pcm/disease/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="681">
-          <caret line="77" column="36" lean-forward="false" selection-start-line="77" selection-start-column="36" selection-end-line="77" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pcm/product/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -1001,20 +917,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ui/extension/style.css">
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/pycharm.jar!/resources/html5-schema/html5/web-forms.rnc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="751">
-          <caret line="77" column="19" lean-forward="false" selection-start-line="77" selection-start-column="19" selection-end-line="77" selection-end-column="19" />
+        <state relative-caret-position="301">
+          <caret line="408" column="16" lean-forward="false" selection-start-line="408" selection-start-column="16" selection-end-line="408" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pcm/product/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="7" column="39" lean-forward="false" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/ui/extension/icon.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pcm/core/urls.py">
@@ -1033,67 +946,119 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pcm/product/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="7" column="39" lean-forward="false" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pcm/core/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="59" column="20" lean-forward="false" selection-start-line="59" selection-start-column="20" selection-end-line="59" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ui/extension/background.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
+        <state relative-caret-position="381">
           <caret line="35" column="47" lean-forward="true" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/4a34ac27/24d595b1-c221-49eb-8298-9ce097aa81ec/disease.public.disease_disease">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/4a34ac27/24d595b1-c221-49eb-8298-9ce097aa81ec/disease.public.product_component">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" text="id=298">
+            <filter text="id=298" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/4a34ac27/24d595b1-c221-49eb-8298-9ce097aa81ec/disease.public.disease_relaycomponent">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true">
+            <filter text="disease_id=1" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/4a34ac27/24d595b1-c221-49eb-8298-9ce097aa81ec/disease.public.django_migrations">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pcm/disease/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-172">
+          <caret line="42" column="50" lean-forward="true" selection-start-line="42" selection-start-column="50" selection-end-line="42" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ui/extension/popup.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="655">
-          <caret line="248" column="20" lean-forward="false" selection-start-line="248" selection-start-column="20" selection-end-line="248" selection-end-column="20" />
+        <state relative-caret-position="2270">
+          <caret line="275" column="27" lean-forward="true" selection-start-line="275" selection-start-column="27" selection-end-line="275" selection-end-column="27" />
           <folding>
             <element signature="e#760#972#0" expanded="false" />
             <element signature="e#1462#1720#0" expanded="false" />
             <element signature="e#2010#2261#0" expanded="false" />
             <element signature="e#2397#3504#0" expanded="false" />
             <element signature="e#3568#4670#0" expanded="false" />
-            <element signature="e#5770#6762#0" expanded="false" />
-            <element signature="e#6805#7844#0" expanded="false" />
-            <element signature="n#!!block;n#saveBack#0" expanded="false" />
-            <element signature="n#!!block;n#createIllnes#0" expanded="false" />
-            <marker date="1529207701064" expanded="false" signature="996:1075" ph="{...}" />
-            <marker date="1529207701064" expanded="false" signature="1097:1171" ph="{...}" />
-            <marker date="1529207701064" expanded="false" signature="1213:1393" ph="{&quot;method&quot;: &quot;GET&quot;...}" />
-            <marker date="1529207701064" expanded="false" signature="1761:1941" ph="{&quot;method&quot;: &quot;GET&quot;...}" />
-            <marker date="1529207701064" expanded="false" signature="4733:5432" ph="{...}" />
-            <marker date="1529207701064" expanded="false" signature="5491:5580" ph="{...}" />
-            <marker date="1529207701064" expanded="false" signature="5638:5728" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pcm/core/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1000">
-          <caret line="59" column="20" lean-forward="false" selection-start-line="59" selection-start-column="20" selection-end-line="59" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/extension/icon.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/extension/getDom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="23" column="40" lean-forward="false" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
-          <folding>
-            <marker date="1529207949059" expanded="true" signature="1440:1512" ph="..." />
-            <marker date="1529207949059" expanded="true" signature="1869:1941" ph="..." />
+            <marker date="1529211077219" expanded="false" signature="996:1075" ph="{...}" />
+            <marker date="1529211077219" expanded="false" signature="1097:1171" ph="{...}" />
+            <marker date="1529211077219" expanded="false" signature="1213:1393" ph="{&quot;method&quot;: &quot;GET&quot;...}" />
+            <marker date="1529211077219" expanded="false" signature="1761:1941" ph="{&quot;method&quot;: &quot;GET&quot;...}" />
+            <marker date="1529211077219" expanded="false" signature="4733:5432" ph="{...}" />
+            <marker date="1529211077219" expanded="false" signature="5491:5580" ph="{...}" />
+            <marker date="1529211077219" expanded="false" signature="5638:5728" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ui/extension/popup.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="41" column="34" lean-forward="false" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
+        <state relative-caret-position="91">
+          <caret line="19" column="61" lean-forward="true" selection-start-line="19" selection-start-column="61" selection-end-line="19" selection-end-column="61" />
           <folding>
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1102,6 +1067,25 @@
             <element signature="n#style#0;n#input#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/extension/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="18" lean-forward="true" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/extension/getDom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="34" column="9" lean-forward="true" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+          <folding>
+            <marker date="1529213427137" expanded="true" signature="1473:1545" ph="..." />
+            <marker date="1529213427137" expanded="true" signature="1935:2007" ph="..." />
           </folding>
         </state>
       </provider>
