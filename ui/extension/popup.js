@@ -44,16 +44,16 @@ fetch(server_name + '/api/components/', {
         credentials: 'include'
     }
 ).then(function (json) {return json.json()})
- .then(function (json) {
-     components = json;
+    .then(function (json) {
+        components = json;
 
-     for (let component of components){
-        let option = document.createElement('option');
-        option.value = component.id;
-        option.innerHTML = component.title;
-        componentsSelect.appendChild(option);
-     }
- });
+        for (let component of components){
+            let option = document.createElement('option');
+            option.value = component.id;
+            option.innerHTML = component.title;
+            componentsSelect.appendChild(option);
+        }
+    });
 
 fetch(server_name + '/api/disease/', {
         headers: {
@@ -64,16 +64,16 @@ fetch(server_name + '/api/disease/', {
         credentials: 'include'
     }
 ).then(function (json) {return json.json()})
- .then(function (json) {
-     disease = json;
+    .then(function (json) {
+        disease = json;
 
-     for (let component of disease){
-        let option = document.createElement('option');
-        option.value = component.id;
-        option.innerHTML = component.title;
-        illnessesSelect.appendChild(option);
-     }
- });
+        for (let component of disease){
+            let option = document.createElement('option');
+            option.value = component.id;
+            option.innerHTML = component.title;
+            illnessesSelect.appendChild(option);
+        }
+    });
 
 // -------------------------------------------------------------
 
@@ -124,14 +124,14 @@ document.getElementById('signup1').onclick = function (elem) {
     let pass = form.elements["pass"].value;
 
     fetch(server_name + '/api/signup/', {
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            method: "POST",
-            credentials: 'include',
-            body: JSON.stringify({username: login, password: pass})
-        })
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        method: "POST",
+        credentials: 'include',
+        body: JSON.stringify({username: login, password: pass})
+    })
         .then(function(res){
             if(res.status != 200){
                 throw Error();
@@ -167,19 +167,19 @@ document.getElementById('logout').onclick = function (elem) {
             credentials: 'include',
             // body: JSON.stringify({username: login, password: pass})
         })
-    .then(function (res) {
-        // if(res.status == 200) {
-        chrome.storage.sync.set({
-            auth: false,
-            bad_components: [],
-            illnesses: []
-        });
+        .then(function (res) {
+            // if(res.status == 200) {
+            chrome.storage.sync.set({
+                auth: false,
+                bad_components: [],
+                illnesses: []
+            });
             // chrome.storage.sync.set({auth: false, userHealth: {}})
-        hide(div_home);
-        show(div_autorisation);
-        // }
-    })
-    .catch(function(res){});
+            hide(div_home);
+            show(div_autorisation);
+            // }
+        })
+        .catch(function(res){});
 };
 
 document.getElementById('signup').onclick = function () {
@@ -200,28 +200,28 @@ illnessesSelect.onchange = function () {
     }
     let value = illnessesSelect.options[illnessesSelect.selectedIndex].value;
     chrome.storage.sync.get(['illnesses'], function(result) {
-        if (!result.illnesses.filter((item)=>item.id===value).length){
+        if (result.illnesses.filter((item)=>item.id==value).length==0){
             result.illnesses.push({
                 id: value,
                 title: illnessesSelect.options[illnessesSelect.selectedIndex].innerHTML
-            })
-        }
-        chrome.storage.sync.set({'illnesses': result.illnesses}, saveBack);
-    });
+            });
+            chrome.storage.sync.set({'illnesses': result.illnesses}, saveBack);
 
-    let option = document.createElement('div');
-    option.innerHTML = illnessesSelect.options[illnessesSelect.selectedIndex].innerHTML;
-    option.classList.add('list-item');
-    option.onclick = () =>{
-       //remove element
-        chrome.storage.sync.get(['illnesses'], function(result) {
-            let buff = result.illnesses.filter((item)=>item.id===value);
-            chrome.storage.sync.set({'illnesses': buff}, saveBack);
-        });
-        option.remove();
-    };
-    illnessesDiv.appendChild(option);
-    illnessesSelect.selectedIndex = 0;
+            let option = document.createElement('div');
+            option.innerHTML = illnessesSelect.options[illnessesSelect.selectedIndex].innerHTML;
+            option.classList.add('list-item');
+            option.onclick = () =>{
+                //remove element
+                chrome.storage.sync.get(['illnesses'], function(result) {
+                    let buff = result.illnesses.filter((item)=>item.id!=value);
+                    chrome.storage.sync.set({'illnesses': buff}, saveBack);
+                });
+                option.remove();
+            };
+            illnessesDiv.appendChild(option);
+        }
+        illnessesSelect.selectedIndex = 0;
+    });
 };
 
 componentsSelect.onchange = function () {
@@ -230,28 +230,27 @@ componentsSelect.onchange = function () {
     }
     let value = componentsSelect.options[componentsSelect.selectedIndex].value;
     chrome.storage.sync.get(['bad_components'], function(result) {
-        if (!result.bad_components.filter((item)=>item.id===value).length){
+        if (result.bad_components.filter((item)=>item.id==value).length==0){
             result.bad_components.push({
                 id: value,
                 title: componentsSelect.options[componentsSelect.selectedIndex].innerHTML
-            })
+            });
+            chrome.storage.sync.set({'bad_components': result.bad_components}, saveBack);
+            let option = document.createElement('div');
+            option.innerHTML = componentsSelect.options[componentsSelect.selectedIndex].innerHTML;
+            option.classList.add('list-item');
+            option.onclick = () =>{
+                //remove element
+                chrome.storage.sync.get(['bad_components'], function(result) {
+                    let buff = result.bad_components.filter((item)=>item.id!=value);
+                    chrome.storage.sync.set({'bad_components': buff}, saveBack);
+                });
+                option.remove();
+            };
+            componentsDiv.appendChild(option);
         }
-        chrome.storage.sync.set({'bad_components': result.bad_components}, saveBack);
+        componentsSelect.selectedIndex = 0;
     });
-
-    let option = document.createElement('div');
-    option.innerHTML = componentsSelect.options[componentsSelect.selectedIndex].innerHTML;
-    option.classList.add('list-item');
-    option.onclick = () =>{
-       //remove element
-        chrome.storage.sync.get(['bad_components'], function(result) {
-            let buff = result.bad_components.filter((item)=>item.id===value);
-            chrome.storage.sync.set({'bad_components': buff}, saveBack);
-        });
-        option.remove();
-    };
-    componentsDiv.appendChild(option);
-    componentsSelect.selectedIndex = 0;
 };
 
 function saveBack() {
@@ -281,7 +280,7 @@ function createIllnes(res) {
         option.onclick = () =>{
             //remove element
             chrome.storage.sync.get(['bad_components'], function(result) {
-                let buff = result.bad_components.filter((item)=>item.id===com.id);
+                let buff = result.bad_components.filter((item)=>item.id!=com.id);
                 chrome.storage.sync.set({'bad_components': buff}, saveBack);
             });
             option.remove();
@@ -295,7 +294,7 @@ function createIllnes(res) {
         option.onclick = () =>{
             //remove element
             chrome.storage.sync.get(['illnesses'], function(result) {
-                let buff = result.illnesses.filter((item)=>item.id===ill.id);
+                let buff = result.illnesses.filter((item)=>item.id!=ill.id);
                 chrome.storage.sync.set({'illnesses': buff}, saveBack);
             });
             option.remove();
