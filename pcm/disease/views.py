@@ -28,11 +28,11 @@ class DiseaseValidateViewSet(BaseViewSet):
         for component_local in ComponentContainer.objects.filter(parent=component):
             rating += 2 - self._verify_component(request, component_local.children)
 
-        if request.user.bad_components.filter(id=component.id).exists():
+        if request.user.bad_components.filter(title__icontains=component.title[:5]).exists():
             raise BadRelationException('Very bad')
 
-        if request.user.disease.filter(components_m2m__status=Ratio.Bad, components_m2m__component=component).exists():
-            return BadRelationException('Very bad')
+        if request.user.disease.filter(components_m2m__status=Ratio.Bad, components_m2m__component__title__icontains=component.title[:5]).exists():
+            raise BadRelationException('Very bad')
 
         return rating
 
@@ -58,9 +58,9 @@ class DiseaseValidateViewSet(BaseViewSet):
                 components = Component.objects.filter(code=product['code'])
                 raiting = 1
                 if components.exists():
-                    self._verify_component(request, components[0])
+                    raiting += self._verify_component(request, components[0])
                 else:
-                    main_component, _ = Component.objects.get_or_create(code=product['code'], defaults={'title': product['title']})
+                    main_component, _ = Component.objects.get_or_create(code=product['code'], defaults={'title': product['title'][:80]})
                     components = Component.objects.filter(title__in=product['components'])
                     for component in components:
                         ComponentContainer.objects.get_or_create(parent=main_component, children=component)
@@ -75,7 +75,7 @@ class DiseaseValidateViewSet(BaseViewSet):
                 result.append({
                     **product,
                     'status': 0,
-                    'description': err
+                    'description': ''
                 })
 
         return Response(status=200, data=result)

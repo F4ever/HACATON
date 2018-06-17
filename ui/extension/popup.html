@@ -1,12 +1,48 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="utf-8">
-        <title>GTmetrix Analyzer</title>
-        <meta content="text/html; charset=utf-8 ; script-src 'self' http://localhost:3000 'unsafe-inline' 'unsafe-eval';" http-equiv="content-type">
-    </head>
-    <body>
-        <div id="app"></div>
-        <script src="/popup.js"></script>
-    </body>
+<head>
+    <meta charset="utf-8">
+    <script src="jquery.js"></script>
+    <link href="/style.css"  rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="header">iHealth Help</div>
+    <div id="authorization" style="visibility: visible">
+        <div class="title">Authorization</div>
+        <form id="form1">
+            <input type="login" name="login" placeholder="Enter login..." class="form-control" style="margin-bottom: 7px">
+            <input type="pass" name="pass" placeholder="Enter password..." class="form-control">
+        </form>
+		<div id="validation_message" style="visibility: hidden; position: absolute">User or password are invalid</div>
+		<div class="bottom-row">
+			<div id="signup" class="signup">Sign Up</div>
+			<div class="login-button" id="form1_button" type="submit">Login</div>
+		</div>
+    </div>
+
+    <div id="registration" style="visibility: hidden; position: absolute" >
+        <div class="title">Registration</div>
+        <form id="form2">
+            <input type="login" name="login" placeholder="Enter login..." class="form-control" style="margin-bottom: 7px">
+            <input type="pass" name="pass" placeholder="Enter password..." class="form-control">
+        </form>
+		<div id="validation_message2" style="visibility: hidden; position: absolute">Username already exists</div>
+		<div class="bottom-row">
+			<div id="login" class="signup">Login</div>
+			<div class="login-button" id="signup1" type="submit">Sign Up</div>
+		</div>
+    </div>
+
+    <div id="home" style="visibility: hidden; position: absolute">
+		<div id="illnesses">Отметьте ваши болезни:</div>
+		<select id="illnesses-select" class="form-control"></select>
+		<hr/>
+		<div id="components">Отметьте нежелательные компоненты:</div>
+		<select id="components-select" class="form-control"></select>
+        <a id="logout" class="myButton">Logout</a>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
 </html>

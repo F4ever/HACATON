@@ -4,8 +4,6 @@ from core.models import User
 
 
 class SignupSerializer(serializers.ModelSerializer):
-    # password = serializers.CharField(write_only=True)
-
     class Meta:
         model = User
         fields = ('username', 'password')

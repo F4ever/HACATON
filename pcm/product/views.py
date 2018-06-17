@@ -5,4 +5,4 @@ from product.serializers import ComponentSerializer
 
 class ComponentViewSet(BaseViewSet):
     serializer_class = ComponentSerializer
-    queryset = Component.objects.all()
+    queryset = Component.objects.filter(parents=None)

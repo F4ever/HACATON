@@ -12,7 +12,8 @@ chrome.runtime.onInstalled.addListener(function() {
       .then(function (data) {
         chrome.storage.sync.set({
             auth: true,
-            userHealth: data
+            bad_components: data.bad_components,
+            illnesses: data.illnesses
         })
     }).catch(function (){
         chrome.storage.sync.set({
@@ -34,8 +35,6 @@ function verifyProducts(productList, tabId) {
     })
     .then(function (json) {return json.json()})
     .then(function (data) {
-        console.log(tabId)
-        console.log(data)
         chrome.tabs.sendMessage(tabId, data);
     })
     .catch(function (data) {})

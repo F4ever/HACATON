@@ -24,8 +24,8 @@ class ProfileViewSet(viewsets.ModelViewSet):
         user.save()
         login(request, user)
 
-        disease = SimpleTitleSerializer(request.user.disease.values_list('id', 'title'), many=True)
-        bad_components = SimpleTitleSerializer(request.user.bad_components.values_list('id', 'title'), many=True)
+        disease = SimpleTitleSerializer(request.user.disease.all(), many=True)
+        bad_components = SimpleTitleSerializer(request.user.bad_components.all(), many=True)
 
         response = {
             'illnesses': disease.data,
@@ -41,8 +41,8 @@ class ProfileViewSet(viewsets.ModelViewSet):
         if user is not None:
             login(request, user)
 
-            disease = SimpleTitleSerializer(request.user.disease.values_list('id', 'title'), many=True)
-            bad_components = SimpleTitleSerializer(request.user.bad_components.values_list('id', 'title'), many=True)
+            disease = SimpleTitleSerializer(request.user.disease.all(), many=True)
+            bad_components = SimpleTitleSerializer(request.user.bad_components.all(), many=True)
 
             response = {
                 'illnesses': disease.data,
@@ -63,8 +63,8 @@ class ProfilePrivateViewSet(viewsets.ModelViewSet):
     permission_classes = (IsAuthenticated,)
 
     def get_profile(self, request):
-        disease = self.get_serializer(request.user.disease.values_list('id', 'title'), many=True)
-        bad_components = self.get_serializer(request.user.bad_components.values_list('id', 'title'), many=True)
+        disease = self.get_serializer(request.user.disease.all(), many=True)
+        bad_components = self.get_serializer(request.user.bad_components.all(), many=True)
 
         response = {
             'illnesses': disease.data,
