@@ -28,19 +28,20 @@ class DiseaseValidateViewSet(BaseViewSet):
         for component_local in ComponentContainer.objects.filter(parent=component):
             rating += 2 - self._verify_component(request, component_local.children)
 
-        items = request.user.bad_components.filter(title__icontains=component.title[:5])
-        if items.exists():
-            items = items.filter(description__isnull=False)
+        if len(component.title) > 4:
+            items = request.user.bad_components.filter(title__icontains=component.title[:5])
             if items.exists():
-                raise BadRelationException(items.first().description)
-            raise BadRelationException('Unknown')
+                items = items.filter(description__isnull=False)
+                if items.exists():
+                    raise BadRelationException(items.first().description)
+                raise BadRelationException('Unknown')
 
-        illes = RelayComponent.objects.filter(disease__user=request.user, status=Ratio.Bad, component__title__icontains=component.title[:5])
-        if illes.exists():
-            illes = illes.filter(description__isnull=False)
+            illes = RelayComponent.objects.filter(disease__user=request.user, status=Ratio.Bad, component__title__icontains=component.title[:5])
             if illes.exists():
-                raise BadRelationException(illes.first().description)
-            raise BadRelationException('Very bad')
+                illes = illes.filter(description__isnull=False)
+                if illes.exists():
+                    raise BadRelationException(illes.first().description)
+                raise BadRelationException('Very bad')
 
         return rating
 

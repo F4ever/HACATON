@@ -131,16 +131,14 @@ document.getElementById('signup1').onclick = function (elem) {
         method: "POST",
         credentials: 'include',
         body: JSON.stringify({username: login, password: pass})
-    })
-        .then(function(res){
-            if(res.status != 200){
+    }).then(function(res){
+            if (res.status != 200){
                 throw Error();
-            } else {
-                hide(div_registration);
-                hide(validation_message1);
-                show(div_home);
-                return res.json();
             }
+            hide(div_registration);
+            hide(validation_message1);
+            show(div_home);
+            return res.json();
         })
         .then(function (res) {
             chrome.storage.sync.set({

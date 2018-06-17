@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d791f5b-7e68-4fb6-be9c-0df8f10641ab" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pcm/core/views.py" afterPath="$PROJECT_DIR$/pcm/core/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pcm/disease/views.py" afterPath="$PROJECT_DIR$/pcm/disease/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/extension/background.js" afterPath="$PROJECT_DIR$/ui/extension/background.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/extension/popup.html" afterPath="$PROJECT_DIR$/ui/extension/popup.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/extension/popup.js" afterPath="$PROJECT_DIR$/ui/extension/popup.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -76,9 +81,48 @@
       <file leaf-file-name="background.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ui/extension/background.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="35" column="47" lean-forward="true" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
+            <state relative-caret-position="240">
+              <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="28" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="popup.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ui/extension/popup.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="111">
+              <caret line="121" column="0" lean-forward="true" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+              <folding>
+                <element signature="e#760#972#0" expanded="false" />
+                <element signature="e#1465#1751#0" expanded="false" />
+                <element signature="e#2044#2323#0" expanded="false" />
+                <element signature="e#5803#7044#0" expanded="false" />
+                <marker date="1529220052931" expanded="false" signature="996:1075" ph="{...}" />
+                <marker date="1529220052931" expanded="false" signature="1097:1171" ph="{...}" />
+                <marker date="1529220052931" expanded="false" signature="1213:1393" ph="{&quot;method&quot;: &quot;GET&quot;...}" />
+                <marker date="1529220052931" expanded="false" signature="1792:1972" ph="{&quot;method&quot;: &quot;GET&quot;...}" />
+                <marker date="1529220052931" expanded="false" signature="4718:5465" ph="{...}" />
+                <marker date="1529220052931" expanded="false" signature="5671:5761" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="popup.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ui/extension/popup.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="351">
+              <caret line="23" column="25" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="25" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -106,52 +150,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="popup.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ui/extension/popup.html">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pcm/disease/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="91">
-              <caret line="19" column="61" lean-forward="true" selection-start-line="19" selection-start-column="61" selection-end-line="19" selection-end-column="61" />
-              <folding>
-                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="popup.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ui/extension/popup.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="861">
-              <caret line="242" column="32" lean-forward="true" selection-start-line="242" selection-start-column="32" selection-end-line="242" selection-end-column="32" />
-              <folding>
-                <element signature="e#760#972#0" expanded="false" />
-                <element signature="e#1465#1751#0" expanded="false" />
-                <element signature="e#2044#2323#0" expanded="false" />
-                <element signature="e#2459#3566#0" expanded="false" />
-                <element signature="e#3630#4700#0" expanded="false" />
-                <marker date="1529217447257" expanded="false" signature="996:1075" ph="{...}" />
-                <marker date="1529217447257" expanded="false" signature="1097:1171" ph="{...}" />
-                <marker date="1529217447257" expanded="false" signature="1213:1393" ph="{&quot;method&quot;: &quot;GET&quot;...}" />
-                <marker date="1529217447257" expanded="false" signature="1792:1972" ph="{&quot;method&quot;: &quot;GET&quot;...}" />
-                <marker date="1529217447257" expanded="false" signature="4763:5510" ph="{...}" />
-                <marker date="1529217447257" expanded="false" signature="5569:5658" ph="{...}" />
-                <marker date="1529217447257" expanded="false" signature="5716:5806" ph="{...}" />
-              </folding>
+            <state relative-caret-position="600">
+              <caret line="38" column="40" lean-forward="false" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="40" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pcm/disease/views.py">
+        <entry file="file://$PROJECT_DIR$/pcm/core/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-172">
-              <caret line="42" column="50" lean-forward="true" selection-start-line="42" selection-start-column="50" selection-end-line="42" selection-end-column="50" />
+            <state relative-caret-position="620">
+              <caret line="73" column="49" lean-forward="false" selection-start-line="73" selection-start-column="49" selection-end-line="73" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -176,8 +189,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>disease</find>
-      <find>sign</find>
       <find>soflow</find>
       <find>margi</find>
       <find>BadRelationException</find>
@@ -206,6 +217,8 @@
       <find>myButton</find>
       <find>log</find>
       <find>ill</find>
+      <find>validation_message1</find>
+      <find>registration</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/ui/extension/vendor</dir>
@@ -237,14 +250,14 @@
         <option value="$PROJECT_DIR$/pcm/product/admin.py" />
         <option value="$PROJECT_DIR$/pcm/product/models.py" />
         <option value="$PROJECT_DIR$/pcm/pcm/utils.py" />
-        <option value="$PROJECT_DIR$/ui/extension/background.js" />
         <option value="$PROJECT_DIR$/pcm/core/serializers.py" />
-        <option value="$PROJECT_DIR$/pcm/core/views.py" />
         <option value="$PROJECT_DIR$/pcm/product/views.py" />
         <option value="$PROJECT_DIR$/ui/extension/style.css" />
-        <option value="$PROJECT_DIR$/ui/extension/popup.html" />
-        <option value="$PROJECT_DIR$/pcm/disease/views.py" />
         <option value="$PROJECT_DIR$/ui/extension/getDom.js" />
+        <option value="$PROJECT_DIR$/pcm/disease/views.py" />
+        <option value="$PROJECT_DIR$/pcm/core/views.py" />
+        <option value="$PROJECT_DIR$/ui/extension/background.js" />
+        <option value="$PROJECT_DIR$/ui/extension/popup.html" />
         <option value="$PROJECT_DIR$/ui/extension/popup.js" />
       </list>
     </option>
@@ -948,22 +961,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pcm/core/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="59" column="20" lean-forward="false" selection-start-line="59" selection-start-column="20" selection-end-line="59" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/extension/background.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="35" column="47" lean-forward="true" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/4a34ac27/24d595b1-c221-49eb-8298-9ce097aa81ec/disease.public.disease_disease">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1022,25 +1019,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pcm/disease/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-172">
-          <caret line="42" column="50" lean-forward="true" selection-start-line="42" selection-start-column="50" selection-end-line="42" selection-end-column="50" />
+        <state relative-caret-position="600">
+          <caret line="38" column="40" lean-forward="false" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ui/extension/popup.html">
+    <entry file="file://$PROJECT_DIR$/pcm/core/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="19" column="61" lean-forward="true" selection-start-line="19" selection-start-column="61" selection-end-line="19" selection-end-column="61" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="620">
+          <caret line="73" column="49" lean-forward="false" selection-start-line="73" selection-start-column="49" selection-end-line="73" selection-end-column="49" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1063,23 +1052,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ui/extension/background.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/extension/popup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="23" column="25" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="25" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ui/extension/popup.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="861">
-          <caret line="242" column="32" lean-forward="true" selection-start-line="242" selection-start-column="32" selection-end-line="242" selection-end-column="32" />
+        <state relative-caret-position="111">
+          <caret line="121" column="0" lean-forward="true" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
           <folding>
             <element signature="e#760#972#0" expanded="false" />
             <element signature="e#1465#1751#0" expanded="false" />
             <element signature="e#2044#2323#0" expanded="false" />
-            <element signature="e#2459#3566#0" expanded="false" />
-            <element signature="e#3630#4700#0" expanded="false" />
-            <marker date="1529217447257" expanded="false" signature="996:1075" ph="{...}" />
-            <marker date="1529217447257" expanded="false" signature="1097:1171" ph="{...}" />
-            <marker date="1529217447257" expanded="false" signature="1213:1393" ph="{&quot;method&quot;: &quot;GET&quot;...}" />
-            <marker date="1529217447257" expanded="false" signature="1792:1972" ph="{&quot;method&quot;: &quot;GET&quot;...}" />
-            <marker date="1529217447257" expanded="false" signature="4763:5510" ph="{...}" />
-            <marker date="1529217447257" expanded="false" signature="5569:5658" ph="{...}" />
-            <marker date="1529217447257" expanded="false" signature="5716:5806" ph="{...}" />
+            <element signature="e#5803#7044#0" expanded="false" />
+            <marker date="1529220052931" expanded="false" signature="996:1075" ph="{...}" />
+            <marker date="1529220052931" expanded="false" signature="1097:1171" ph="{...}" />
+            <marker date="1529220052931" expanded="false" signature="1213:1393" ph="{&quot;method&quot;: &quot;GET&quot;...}" />
+            <marker date="1529220052931" expanded="false" signature="1792:1972" ph="{&quot;method&quot;: &quot;GET&quot;...}" />
+            <marker date="1529220052931" expanded="false" signature="4718:5465" ph="{...}" />
+            <marker date="1529220052931" expanded="false" signature="5671:5761" ph="{...}" />
           </folding>
         </state>
       </provider>

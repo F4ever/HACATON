@@ -32,7 +32,7 @@ class ProfileViewSet(viewsets.ModelViewSet):
             'bad_components': bad_components.data
         }
 
-        return Response(response, status=status.HTTP_201_CREATED)
+        return Response(response, status=status.HTTP_200_OK)
 
     def login(self, request):
         serializer = LoginSerializer(data=request.data)
@@ -49,12 +49,12 @@ class ProfileViewSet(viewsets.ModelViewSet):
                 'bad_components': bad_components.data
             }
 
-            return Response(status=200, data=response)
+            return Response(status=status.HTTP_200_OK, data=response)
         return Response(status=404, data={'error': 'Username or password is wrong!'})
 
     def logout(self, request):
         logout(request)
-        return Response(status=status.HTTP_202_ACCEPTED)
+        return Response(status=status.HTTP_200_OK)
 
 
 class ProfilePrivateViewSet(viewsets.ModelViewSet):
@@ -71,7 +71,7 @@ class ProfilePrivateViewSet(viewsets.ModelViewSet):
             'bad_components': bad_components.data
         }
 
-        return Response(status=200, data=response)
+        return Response(status=status.HTTP_200_OK, data=response)
 
     def update_profile(self, request):
         request.user.disease.set(request.data['illnesses'])

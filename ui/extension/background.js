@@ -8,7 +8,12 @@ chrome.runtime.onInstalled.addListener(function() {
           'Accept': 'application/json'
       }
     })
-      .then(function (json) {return json.json()})
+      .then(function (json) {
+          if(res.status != 200){
+              throw Error();
+          }
+          return json.json()
+      })
       .then(function (data) {
         chrome.storage.sync.set({
             auth: true,
@@ -33,7 +38,13 @@ function verifyProducts(productList, tabId) {
         },
         body: JSON.stringify(productList)
     })
-    .then(function (json) {return json.json()})
+    .then(function (json) {
+        if(res.status != 200){
+            throw Error();
+        }else{
+            return json.json()
+        }
+    })
     .then(function (data) {
         chrome.tabs.sendMessage(tabId, data);
     })
