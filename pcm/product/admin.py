@@ -3,4 +3,8 @@ from django.contrib import admin
 from .models import *
 
 
-admin.site.register(Component)
+class ComponentAdmin(admin.ModelAdmin):
+    search_fields = ('title',)
+
+
+admin.site.register(Component, ComponentAdmin)

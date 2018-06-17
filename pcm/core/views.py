@@ -4,6 +4,7 @@ from __future__ import unicode_literals
 from django.contrib.auth import logout, login, authenticate
 from rest_framework import viewsets, status
 from rest_framework.authentication import SessionAuthentication
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
 from core.serializers import SignupSerializer, LoginSerializer, SimpleTitleSerializer
@@ -22,8 +23,16 @@ class ProfileViewSet(viewsets.ModelViewSet):
         user.set_password(serializer.data['password'])
         user.save()
         login(request, user)
-        headers = self.get_success_headers(serializer.data)
-        return Response(serializer.data, status=status.HTTP_201_CREATED, headers=headers)
+
+        disease = SimpleTitleSerializer(request.user.disease.values_list('id', 'title'), many=True)
+        bad_components = SimpleTitleSerializer(request.user.bad_components.values_list('id', 'title'), many=True)
+
+        response = {
+            'illnesses': disease.data,
+            'bad_components': bad_components.data
+        }
+
+        return Response(response, status=status.HTTP_201_CREATED)
 
     def login(self, request):
         serializer = LoginSerializer(data=request.data)
@@ -31,16 +40,31 @@ class ProfileViewSet(viewsets.ModelViewSet):
         user = authenticate(request, username=serializer.data['username'], password=serializer.data['password'])
         if user is not None:
             login(request, user)
-            return Response(status=200)
+
+            disease = SimpleTitleSerializer(request.user.disease.values_list('id', 'title'), many=True)
+            bad_components = SimpleTitleSerializer(request.user.bad_components.values_list('id', 'title'), many=True)
+
+            response = {
+                'illnesses': disease.data,
+                'bad_components': bad_components.data
+            }
+
+            return Response(status=200, data=response)
         return Response(status=404, data={'error': 'Username or password is wrong!'})
 
     def logout(self, request):
         logout(request)
         return Response(status=status.HTTP_202_ACCEPTED)
 
+
+class ProfilePrivateViewSet(viewsets.ModelViewSet):
+    serializer_class = SimpleTitleSerializer
+    authentication_classes = (SessionAuthentication,)
+    permission_classes = (IsAuthenticated,)
+
     def get_profile(self, request):
-        disease = SimpleTitleSerializer(request.user.disease.values_list('id', 'title'), many=True)
-        bad_components = SimpleTitleSerializer(request.user.bad_components.values_list('id', 'title'), many=True)
+        disease = self.get_serializer(request.user.disease.values_list('id', 'title'), many=True)
+        bad_components = self.get_serializer(request.user.bad_components.values_list('id', 'title'), many=True)
 
         response = {
             'illnesses': disease.data,

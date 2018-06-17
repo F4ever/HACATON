@@ -1,22 +1,52 @@
-// Regex-pattern to check URLs against.
-// It matches URLs like: http[s]://[...]stackoverflow.com[...]
-var urlRegex = /^https?:\/\/(?:[^./?#]+\.)?stackoverflow\.com/;
-
-// A function to use as callback
-function doStuffWithDom(domContent) {
-    console.log('I received the following DOM content:\n' + domContent);
-}
-
-// When the browser-action button is clicked...
-chrome.browserAction.onClicked.addListener(function (tab) {
-    console.log(111);
-    // ...check the URL of the active tab against our pattern and...
-    if (urlRegex.test(tab.url)) {
-        // ...if it matches, send a message specifying a callback too
-        chrome.tabs.sendMessage(tab.id, {text: 'report_back'}, doStuffWithDom);
-    }
+// background.js
+chrome.runtime.onInstalled.addListener(function() {
+    fetch('http://192.168.1.130:8080/api/profile/', {
+      method: 'GET',
+      credentials: 'include',
+      headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+      }
+    })
+      .then(function (json) {return json.json()})
+      .then(function (data) {
+        chrome.storage.sync.set({
+            auth: true,
+            userHealth: data
+        })
+    }).catch(function (){
+        chrome.storage.sync.set({
+            auth: false
+        })
+    })
 });
 
-console.log('BACK');
+function verifyProducts(productList, tabId) {
+    fetch('http://192.168.1.130:8080/api/components-validate/', {
+        method: 'POST',
+        credentials: 'include',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+            // 'X-CSRFToken': cookie.get('csrftoken')
+        },
+        body: JSON.stringify(productList)
+    })
+    .then(function (json) {return json.json()})
+    .then(function (data) {chrome.tabs.sendMessage(tabId, data);})
+    .catch(function (data) {})
+}
 
+chrome.tabs.onUpdated.addListener(function(tabId, change, tab){
+    function parseDom(product){
+        if (product){
+            verifyProducts([product], tabId)
+        }
+    }
 
+    if (change.status==='complete'){
+        window.setTimeout(function () {
+            chrome.tabs.sendMessage(tabId, 'get_product', parseDom)
+        }, 2000);
+    }
+});
