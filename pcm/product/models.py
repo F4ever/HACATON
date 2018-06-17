@@ -4,7 +4,7 @@ from pcm.utils import CoreModel
 
 
 class Component(CoreModel):
-    code = models.CharField(null=True, blank=True, max_length=128)
+    code = models.CharField(null=True, blank=True, max_length=256)
     description = models.TextField(blank=True)
 
     def __str__(self):

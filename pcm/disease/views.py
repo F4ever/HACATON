@@ -26,7 +26,7 @@ class DiseaseValidateViewSet(BaseViewSet):
         rating = 0
 
         for component_local in ComponentContainer.objects.filter(parent=component):
-            rating += 2 - self._verify_component(request, component_local.component)
+            rating += 2 - self._verify_component(request, component_local.children)
 
         if request.user.bad_components.filter(id=component.id).exists():
             raise BadRelationException('Very bad')

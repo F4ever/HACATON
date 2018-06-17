@@ -33,7 +33,11 @@ function verifyProducts(productList, tabId) {
         body: JSON.stringify(productList)
     })
     .then(function (json) {return json.json()})
-    .then(function (data) {chrome.tabs.sendMessage(tabId, data);})
+    .then(function (data) {
+        console.log(tabId)
+        console.log(data)
+        chrome.tabs.sendMessage(tabId, data);
+    })
     .catch(function (data) {})
 }
 

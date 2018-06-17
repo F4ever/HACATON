@@ -6,7 +6,7 @@ from rest_framework.permissions import IsAuthenticated
 
 
 class CoreModel(models.Model):
-    title = models.CharField(max_length=128)
+    title = models.CharField(max_length=256)
     slug = models.CharField(max_length=128, blank=True)
 
     updated_at = models.DateTimeField(auto_now=True)
